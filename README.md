@@ -23,3 +23,19 @@ This is a simple **ASP.NET Core Razor Pages application** that demonstrates the 
 - Bootstrap (optional for styling)  
 
 ## Project Structure
+RazorPagesMovieApp/
+│-- Pages/
+│ │-- Index.cshtml # Overview page
+│ │-- MovieDetails.cshtml # Movie details page
+│ │-- Shared/ # Layout & partial views
+│
+│-- Services/
+│ │-- MovieService.cs # Handles movie data & seed logic
+│
+│-- Models/
+│ │-- Movie.cs # Movie model
+│
+│-- wwwroot/ # Static files (css, js, images)
+│
+│-- Program.cs # Configures services & middleware
+
