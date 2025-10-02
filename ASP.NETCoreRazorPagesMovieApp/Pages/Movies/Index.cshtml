@@ -1,16 +1,17 @@
 ﻿@page
 @model ASP.NETCoreRazorPagesMovieApp.Pages.Movies.IndexModel
-
+<div style=" display: flex; justify-content: center">
 <div class="text-center">
     <h1>Movie List</h1>
 
     @if (Model.Movies != null && Model.Movies.Any())
     {
-        <ul class="list-unstyled">
+
+        <ul class="list-group">
             @foreach (var movie in Model.Movies)
             {
                 <li>
-                    <a asp-page="/Movies/Details" asp-route-id="@movie.Id">
+                        <a asp-page="/Movies/Details" class="list-group-item list-group-item-action" asp-route-id="@movie.Id">
                         @movie.Title (@movie.Year)
                     </a>
                 </li>
@@ -21,4 +22,5 @@
     {
         <p>No movies found.</p>
     }
+</div>
 </div>
