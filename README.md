@@ -20,22 +20,26 @@ This is a simple **ASP.NET Core Razor Pages application** that demonstrates the 
 - C#  
 - Dependency Injection  
 - Tag Helpers  
-- Bootstrap (optional for styling)  
+- Some BootStrap Styling
+
 
 ## Project Structure
 RazorPagesMovieApp/
 │-- Pages/
 │ │-- Index.cshtml # Overview page
-│ │-- MovieDetails.cshtml # Movie details page
+│ │-- Details.cshtml # Movie details page
+| |-- inputmoviedata.cshtml # Add a Movie page
 │ │-- Shared/ # Layout & partial views
 │
-│-- Services/
+│-- MovieServices/
+| |--Interface/
+|    |--IMovie.cs
+|    |--IService.cs
 │ │-- MovieService.cs # Handles movie data & seed logic
-│
+│ │-- StaticServices.cs # Handles movie data & seed logic
 │-- Models/
-│ │-- Movie.cs # Movie model
-│
-│-- wwwroot/ # Static files (css, js, images)
+│ │-- MovieInfo.cs # Movie model
+│ │-- StaticService.cs # lists of Movies
 │
 │-- Program.cs # Configures services & middleware
 
