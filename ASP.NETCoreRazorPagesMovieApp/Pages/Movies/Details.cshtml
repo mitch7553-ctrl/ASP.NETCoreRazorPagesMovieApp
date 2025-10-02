@@ -1,0 +1,14 @@
+﻿@page "{id:int}"
+@model ASP.NETCoreRazorPagesMovieApp.Pages.Movies.IDetailsModel
+@if (Model.MovieInfo == null)
+{
+    <p>No Results.</p>
+    <a asp-page="/Index">Return Home</a>
+} else
+{
+    <div>
+        <h1>@Model.MovieInfo.Title</h1>
+        <p>@Model.MovieInfo.Description</p>
+        <a asp-page="/Index">Return Home</a>
+    </div>
+}
